@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			body{
+				padding-top:10px ;
+			}
+			#all_bg{
+				width:800px;
+				height: 600px;
+				margin-top: 0;
+				margin-left: 150px;
+
+			}
+			#allcanvas{
+				position:relative;
+				width:800px;
+				height: 600px;
+			}
+			#canvas1{
+				position:absolute;
+				top:0;
+				left:0;
+				z-index: 1; /*先后关系-先*/
+			}
+			#canvas2{
+				position:absolute;
+				top:0;
+				left:0;
+				z-index: 0; /*先后关系-后*/
+			}
+
+			#score{
+				position: absolute;
+				top: 20px;
+				right: 45px;
+
+			}
+			.hide{
+				display: none;
+			}
+			  span{
+				display: block;
+				border-top: 1px solid seagreen;
+				border-left: 1px solid seagreen;
+				border-right: 1px solid seagreen;
+				font-family: "微软雅黑";
+				font-size: 20px;
+				float: left;
+				margin: auto 8px;			
+				cursor: pointer;
+				background-color:#fff ;
+				
+			}
+			#score div{
+				margin-top: 62px;
+				border-top: 2px solid steelblue;
+				border-bottom: 1px solid forestgreen;
+				border-left: 1px solid forestgreen;
+				border-right: 1px solid forestgreen;
+				font-family: "微软雅黑";
+				font-size: 20px;
+				
+				}
+			#score div li{
+				margin-left: 105px;
+			}	
+			.spanborder{
+				border-top: 2px solid steelblue;
+				border-bottom: 2px solid white;
+			
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+				<div id="all_bg">
+					<div id="allcanvas">
+						<canvas id="canvas1" width="800" height="600"></canvas>
+						<canvas id="canvas2" width="800" height="600"></canvas>
+					</div>
+					<audio src="img/bf.wav" id="audiobf"></audio>
+					<audio src="img/bs.wav" id="audiobs"></audio>
+					<audio src="img/bh.wav" id="audiobh"></audio>
+					<audio src="img/level_up.mp3" id="audiolp"></audio>
+				</div>
+
+					<div id="score">
+							<p style="font-family: '微软雅黑' 'arial';font-size: 35px; height: 46px;text-align: center;">分数排行榜</p>
+							
+							<span id="s1" class="spanborder">简单模式</span>
+							<span id="s2" >普通模式</span>
+							<span id="s3" >困难模式</span>
+							
+							<div id="dive" ></div>
+							<div id="divo" class="hide"></div>					
+							<div id="divd" class="hide"></div>
+						
+					</div>		
+
+			</div>
+			<script type="text/javascript" src="js/main.js" ></script>
+			<script type="text/javascript" src="js/commonFunctions.js" ></script>
+			<script type="text/javascript" src="js/bg-fruit-ane-hinder.js" ></script>
+			<script type="text/javascript" src="js/Fish.js" ></script>
+			<script type="text/javascript" src="js/collision.js" ></script>
+			<script type="text/javascript" src="js/data.js" ></script>
+			<script type="text/javascript" src="js/control.js" ></script>
+			<script type="text/javascript" src="js/effect.js" ></script>
+			<script type="text/javascript" src="js/highScore.js" ></script>
+	</body>
+</html>
